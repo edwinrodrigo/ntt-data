@@ -1,0 +1,60 @@
+version: "3.9"
+services:
+  manager:
+    container_name: manager-api
+    command: mvn spring-boot:run -pl .
+    build:
+      context: .
+      dockerfile: ./ntt-data-manager-api/Dockerfile
+    ports:
+      - "8081:8081"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - postgres-network
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/ntt-data
+      - nttdata-manager-test_cliente_crear=http://manager:8081/nttdata-manager-api/clientes
+  transaction:
+    container_name: transactional-api
+    command: mvn spring-boot:run -pl .
+    build:
+      context: .
+      dockerfile: ./ntt-data-transactional-api/Dockerfile
+    ports:
+      - "8082:8082"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - postgres-network
+    environment:
+      - nttdatamanagerapi_baseurl=http://manager:8081/nttdata-manager-api
+      - spring_datasource_url=jdbc:postgresql://postgres:5432/ntt-data
+      - nttdata-transactional-test_cuenta_crear=http://transaction:8082/ntt-data-transactional-api/cuentas
+  postgres:
+    container_name: postgres-nttdata
+    image: "postgres:14-alpine"
+    restart: always
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_DB: "ntt-data"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 30s
+      timeout: 5s
+      retries: 10
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - postgres-network
+
+networks:
+  postgres-network:
+
+volumes:
+  postgres_data:

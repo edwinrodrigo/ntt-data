@@ -1,0 +1,31 @@
+server:
+   port: 8081
+   servlet:
+    context-path: /nttdata-manager-api
+spring:
+  application:
+    name: ntt-data-manager-api
+  datasource:
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/ntt-data}
+    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            "[non_contextual_creation]": true
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  test:
+    constructor:
+      autowire: true
+custom:
+  password:
+    pattern: "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"
+nttdata-manager-test:
+  cliente:
+    crear: http://localhost:8081/nttdata-manager-api/clientes

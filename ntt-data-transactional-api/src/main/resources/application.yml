@@ -1,0 +1,32 @@
+server:
+   port: 8082
+   servlet:
+    context-path: /ntt-data-transactional-api
+spring:
+  application:
+    name: ntt-data-transactional-api
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/ntt-data
+    password: postgres
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            "[non_contextual_creation]": true
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+nttdatamanagerapi:
+  baseurl: http://localhost:8081/nttdata-manager-api
+  clientcontroller:
+    findbyid: /clientes/{id}
+    findbyIdMsgError: Cliente no encontrado, por favor verifique si esta creado
+messages:
+  insufficientbalance: Saldo no disponible
+nttdata-transactional-test:
+  cuenta:
+    crear: http://localhost:8082/ntt-data-transactional-api/cuentas

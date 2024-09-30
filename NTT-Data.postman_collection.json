@@ -1,0 +1,460 @@
+{
+	"info": {
+		"_postman_id": "d466e98d-15e5-4677-a312-533363456319",
+		"name": "NTT-Data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4147991"
+	},
+	"item": [
+		{
+			"name": "cliente",
+			"item": [
+				{
+					"name": "http://localhost:8081/nttdata-manager-api/clientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Gabriela Caiza\",\r\n  \"genero\": \"M\",\r\n  \"edad\": 20,\r\n  \"identificacion\": 123456789,\r\n  \"direccion\": \"km\",\r\n  \"telefono\": \"0992087507\",\r\n  \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/nttdata-manager-api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"nttdata-manager-api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/nttdata-manager-api/clientes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"nombre\": \"string\",\r\n  \"genero\": \"string\",\r\n  \"edad\": 0,\r\n  \"identificacion\": \"string\",\r\n  \"direccion\": \"string\",\r\n  \"telefono\": \"string\",\r\n  \"contrasena\": \"string\",\r\n  \"estado\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/nttdata-manager-api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"nttdata-manager-api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/nttdata-manager-api/clientes/4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"nombre\": \"string\",\r\n  \"genero\": \"string\",\r\n  \"edad\": 0,\r\n  \"identificacion\": \"string\",\r\n  \"direccion\": \"string\",\r\n  \"telefono\": \"string\",\r\n  \"contrasena\": \"string\",\r\n  \"estado\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/nttdata-manager-api/clientes/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"nttdata-manager-api",
+								"clientes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/nttdata-manager-api/clientes/4",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"nombre\": \"Edwin 123\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 35,\r\n    \"identificacion\": \"0924\",\r\n    \"direccion\": \"Km\",\r\n    \"telefono\": \"0924\",\r\n    \"contrasena\": \"contra\",\r\n    \"estado\": \"Activo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/nttdata-manager-api/clientes/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"nttdata-manager-api",
+								"clientes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/nttdata-manager-api/clientes/5",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"nombre\": \"Edwin 123\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 35,\r\n    \"identificacion\": \"0924\",\r\n    \"direccion\": \"Km\",\r\n    \"telefono\": \"0924\",\r\n    \"contrasena\": \"contra\",\r\n    \"estado\": \"Activo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/nttdata-manager-api/clientes/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"nttdata-manager-api",
+								"clientes",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cuenta",
+			"item": [
+				{
+					"name": "http://localhost:8082/ntt-data-transactional-api/cuentas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoCuenta\": \"A\",\r\n    \"numeroCuenta\": \"111111\",\r\n    \"saldoInicial\": 10000,\r\n    \"idCliente\": 4,\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/ntt-data-transactional-api/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ntt-data-transactional-api",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/ntt-data-transactional-api/cuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/ntt-data-transactional-api/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ntt-data-transactional-api",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/ntt-data-transactional-api/cuentas/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/ntt-data-transactional-api/cuentas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ntt-data-transactional-api",
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/ntt-data-transactional-api/cuentas/1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cuentaId\": 1,\r\n    \"numeroCuenta\": \"0001001001\",\r\n    \"tipoCuenta\": \"ahorros\",\r\n    \"saldoInicial\": 10000.01,\r\n    \"estado\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/ntt-data-transactional-api/cuentas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ntt-data-transactional-api",
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/ntt-data-transactional-api/cuentas/3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/ntt-data-transactional-api/cuentas/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ntt-data-transactional-api",
+								"cuentas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movimiento",
+			"item": [
+				{
+					"name": "http://localhost:8082/ntt-data-transactional-api/movimientos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipo\": \"test\",\r\n  \"movimiento\": \"a\",\r\n  \"valor\": 0,\r\n  \"saldo\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/ntt-data-transactional-api/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ntt-data-transactional-api",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/ntt-data-transactional-api/movimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/ntt-data-transactional-api/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ntt-data-transactional-api",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/ntt-data-transactional-api/movimientos/53465011-4966-4bfb-b2c4-eb22f2d457f9",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/ntt-data-transactional-api/movimientos/53465011-4966-4bfb-b2c4-eb22f2d457f9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ntt-data-transactional-api",
+								"movimientos",
+								"53465011-4966-4bfb-b2c4-eb22f2d457f9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/ntt-data-transactional-api/movimientos/53465011-4966-4bfb-b2c4-eb22f2d457f9",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"53465011-4966-4bfb-b2c4-eb22f2d457f9\",\r\n    \"fecha\": null,\r\n    \"tipo\": \"Pago Escuela\",\r\n    \"movimiento\": \"Retiro\",\r\n    \"valor\": 10,\r\n    \"saldo\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/ntt-data-transactional-api/movimientos/53465011-4966-4bfb-b2c4-eb22f2d457f9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ntt-data-transactional-api",
+								"movimientos",
+								"53465011-4966-4bfb-b2c4-eb22f2d457f9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/ntt-data-transactional-api/movimientos/404dd09c-247b-4dab-ad76-bff1d0169747",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/ntt-data-transactional-api/movimientos/404dd09c-247b-4dab-ad76-bff1d0169747",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ntt-data-transactional-api",
+								"movimientos",
+								"404dd09c-247b-4dab-ad76-bff1d0169747"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reportes",
+			"item": [
+				{
+					"name": "reporteMovimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/ntt-data-transactional-api/reportes?fechaDesde=25/09/2024&fechaHasta=26/09/2024&clienteId=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ntt-data-transactional-api",
+								"reportes"
+							],
+							"query": [
+								{
+									"key": "fechaDesde",
+									"value": "25/09/2024"
+								},
+								{
+									"key": "fechaHasta",
+									"value": "26/09/2024"
+								},
+								{
+									"key": "clienteId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
